@@ -41,7 +41,7 @@ import { ClipLoader, BounceLoader, RingLoader, PulseLoader } from 'react-spinner
 // EXERCÍCIO 7 - react-type-animation
 // TODO: Descomente a linha abaixo após instalar
 // ============================================
-// import { TypeAnimation } from 'react-type-animation'
+import { TypeAnimation } from 'react-type-animation'
 
 function App() {
   // Estado para exercício 2 (confetti)
@@ -372,7 +372,18 @@ setUsuarios([...usuarios, novoUsuario])`}</pre>
 
             <div className="preview-area" style={{ fontStyle: 'normal', fontSize: '1.5rem' }}>
               {/* TODO: Substitua o texto abaixo pelo componente <TypeAnimation /> */}
-              <h2 style={{ color: '#58a6ff' }}>Texto animado vai aparecer aqui...</h2>
+              <h2 style={{ color: '#58a6ff' }}><TypeAnimation
+  sequence={[
+    'Eu amo React!', 2000,
+    'Eu amo Node.js!', 2000,
+    'Eu amo NPM!', 2000,
+    'Eu amo programar!', 2000,
+  ]}
+  wrapper="h2"
+  speed={50}
+  repeat={Infinity}
+  style={{ color: '#58a6ff' }}
+/></h2>
             </div>
           </div>
         </div>
